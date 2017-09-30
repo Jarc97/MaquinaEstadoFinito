@@ -1,0 +1,82 @@
+<list>
+  <estado>
+    <tipo>Inicial</tipo>
+    <id>A</id>
+    <x>54</x>
+    <y>137</y>
+    <unico>0</unico>
+  </estado>
+  <estado>
+    <tipo>Intermedio</tipo>
+    <id>B</id>
+    <x>118</x>
+    <y>216</y>
+    <unico>1</unico>
+  </estado>
+  <estado>
+    <tipo>Intermedio</tipo>
+    <id>C</id>
+    <x>177</x>
+    <y>131</y>
+    <unico>2</unico>
+  </estado>
+  <estado>
+    <tipo>Final</tipo>
+    <id>D</id>
+    <x>267</x>
+    <y>219</y>
+    <unico>3</unico>
+  </estado>
+</list>
+<!---->
+<list>
+  <transicion>
+    <estadoSaliente>
+      <tipo>Intermedio</tipo>
+      <id>B</id>
+      <x>118</x>
+      <y>216</y>
+      <unico>1</unico>
+    </estadoSaliente>
+    <estadoEntrante>
+      <tipo>Inicial</tipo>
+      <id>A</id>
+      <x>54</x>
+      <y>137</y>
+      <unico>0</unico>
+    </estadoEntrante>
+    <simbolo>01</simbolo>
+  </transicion>
+  <transicion>
+    <estadoSaliente reference="../../transicion/estadoSaliente"/>
+    <estadoEntrante reference="../../transicion/estadoSaliente"/>
+    <simbolo>01</simbolo>
+  </transicion>
+  <transicion>
+    <estadoSaliente>
+      <tipo>Intermedio</tipo>
+      <id>C</id>
+      <x>177</x>
+      <y>131</y>
+      <unico>2</unico>
+    </estadoSaliente>
+    <estadoEntrante reference="../../transicion/estadoSaliente"/>
+    <simbolo>.</simbolo>
+  </transicion>
+  <transicion>
+    <estadoSaliente>
+      <tipo>Final</tipo>
+      <id>D</id>
+      <x>267</x>
+      <y>219</y>
+      <unico>3</unico>
+    </estadoSaliente>
+    <estadoEntrante reference="../../transicion[3]/estadoSaliente"/>
+    <simbolo>01</simbolo>
+  </transicion>
+  <transicion>
+    <estadoSaliente reference="../../transicion[4]/estadoSaliente"/>
+    <estadoEntrante reference="../../transicion[4]/estadoSaliente"/>
+    <simbolo>01</simbolo>
+  </transicion>
+</list>
